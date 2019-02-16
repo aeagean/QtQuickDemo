@@ -16,19 +16,34 @@ int main(int argc, char *argv[])
 
 #else
 
-#include <QGuiApplication>
-#include <QQmlApplicationEngine>
+#include <QApplication>
+#include <QQuickView>
 
 int main(int argc, char *argv[])
 {
-    QGuiApplication app(argc, argv);
+    QApplication app(argc, argv);
 
-    QQmlApplicationEngine engine;
-    engine.load(QUrl::fromLocalFile(QLatin1String("main.qml")));
-    if (engine.rootObjects().isEmpty())
-        return -1;
-
+    QQuickView viewer;
+    viewer.setSource(QUrl::fromLocalFile(QLatin1String("main.qml")));
+    viewer.show();
     return app.exec();
 }
+
+/************************************OR*********************************/
+
+//#include <QGuiApplication>
+//#include <QQmlApplicationEngine>
+
+//int main(int argc, char *argv[])
+//{
+//    QGuiApplication app(argc, argv);
+
+//    QQmlApplicationEngine engine;
+//    engine.load(QUrl::fromLocalFile(QLatin1String("main-qt5.qml")));
+//    if (engine.rootObjects().isEmpty())
+//        return -1;
+
+//    return app.exec();
+//}
 
 #endif
