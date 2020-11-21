@@ -25,3 +25,5 @@ QtQuickVersion.target = FORCE
 
 PRE_TARGETDEPS += FORCE
 QMAKE_EXTRA_TARGETS += QtQuickVersion
+
+DEFINES += MY_QML_DIR=\\\"'$$PWD'\\\"
