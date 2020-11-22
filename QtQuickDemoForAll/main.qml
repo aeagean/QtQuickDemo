@@ -1,16 +1,6 @@
-import QtQuick 1.1
+import QtQuick 2.0
+import "https://qthub.com/qt/qtcomponent/"
 
-Rectangle {
-    width: 360
-    height: 360
-    Text {
-        text: qsTr("Hello World")
-        anchors.centerIn: parent
-    }
-    MouseArea {
-        anchors.fill: parent
-        onClicked: {
-            Qt.quit();
-        }
-    }
+IpInputDemo {
+
 }
