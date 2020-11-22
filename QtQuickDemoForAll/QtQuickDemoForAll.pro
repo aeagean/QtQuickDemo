@@ -5,6 +5,7 @@ equals (QT_MAJOR_VERSION, 4): QT += declarative
 equals (QT_MAJOR_VERSION, 5): QT += qml quick quickwidgets
 
 SOURCES += main.cpp
+RC_ICONS = app.ico
 
 equals(QT_MAJOR_VERSION, 4) {
     QT_QUICK_VERSION = 1.0
